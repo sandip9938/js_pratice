@@ -1,0 +1,26 @@
+// var vs let and const 
+// Scope 
+
+// Var is global scope 
+//  it can be accessed from anywhere in the code. It has function-level scoping which meansz
+
+
+
+// Declaration 
+// var is redeclarate same scope but const and let is not redeclarate  same scope 
+
+
+
+
+// Declarataion without intialisation 
+// var and let is Declarataion without intialisation but const is not Declarataion without intialisation 
+
+
+
+
+// Re-intialization
+// var and let is Re-intialization but const is not Re-intialization
+
+
+// Hoisting 
+//  In JavaScript, variable declarations are hoisted to the top of their respective scopes (global or local)
