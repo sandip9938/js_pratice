@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: antiquewhite;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML have two child they are 1.Body and 2.head -->
+<!-- Body is the main part of a web page it contains all other elements like h1 ,p etc-->
+<!-- Head contain meta data about your website like title , description , keywords etc.. -->
+
+
+<!-- CSS is used to style our webpage we can use css in three ways
+    1) Inline styling
+    2) Internal Styling (using style tag inside head section )
+    3) External Style Sheets( using link tag with href attribute pointing to external file containing styles )
+    3) External Style Sheets( using link tag inside head section) -->
+
+
+<!-- JS is used for interactivity in web pages-->
+    <div class="bg-black">
+        <h1 class="Heading">Dom learning on Hitesh sir</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, similique vitae quam sapiente perferendis placeat.</p>
+    </div>
+
+</body>
+<script>
+    // console.log("hello");
+    var heading = document.querySelector(".Heading")
+    if(!heading){
+        alert('No Heading Found');
+        }else{
+            heading.style.color='green';
+            };
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
