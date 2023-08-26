@@ -4,9 +4,14 @@ const promiseOne = new Promise(function (resolve, reject) {
     resolve();
   }, 1000);
 });
+
+
 promiseOne.then(function () {
   console.log("Promise iws consumed");
 });
+
+
+
 new Promise(function (resolve, reject) {
   setTimeout(function () {
     console.log("Async task 2");
@@ -15,14 +20,20 @@ new Promise(function (resolve, reject) {
 }).then(function () {
   console.log("async resolve 2");
 });
+
+
 const promethree = new Promise(function (resolve, rejec) {
   setTimeout(() => {
     resolve({ username: "sandip", email: "sandippanda577@gmail.com" });
   }, 1000);
 });
+
+
 promethree.then(function (user) {
   console.log(user);
 });
+
+
 
 const promiosefour = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -40,6 +51,8 @@ const promiosefour = new Promise((resolve, reject) => {
     }
   }, 1000);
 });
+
+
 promiosefour
   .then((user) => {
     console.log(user);
@@ -53,6 +66,8 @@ promiosefour
   }).finally(()=>{
     console.log('Finally block executed');
   })
+
+
 
   const promiseFive = new Promise(function (resolve,reject) {
     setTimeout(() => {
@@ -70,6 +85,8 @@ promiosefour
         }
       }, 1000);
   })
+
+
   promiseFive.then()
 
   async function getalluser() {
@@ -84,3 +101,5 @@ promiosefour
   }
   }
   getalluser()
+
+  

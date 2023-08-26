@@ -12,6 +12,7 @@ function App() {
   const addValue = () => {
     // counter = counter+1
     setCount(counter + 1);
+   
     if(setCount>20){
       alert('its last number')
     }
@@ -30,6 +31,7 @@ function App() {
       <h2>counter value: {counter}</h2>
       <button onClick={addValue}>Add value</button>
       <button onClick={removeValue}>Remove value</button>
+
     </>
 
     // *<button onClick={() => setCount(count + 1)}>+</button>*/
