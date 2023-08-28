@@ -1,4 +1,34 @@
 // **********************1.js**************** //
+// js have 2 version they are ES5 and ES6 
+// ES5 is the old way of writing javascript ,here only use var.
+var x = "hello";
+console.log(x);
+// ES6 is the new way writing js , here add let & const .
+let p= 'world';
+const z='this is a constant' ;
+console.log(`${p} ${z}`);
+
+
+// window = which is not defined or not have a js language but its only have a browser . as like all features not have js but use in browser its called window. Ex=
+window.alert('Hello world');
+document.write('<h3> Hello World </h3>');
+
+// types of memory alocation 
+/*
+*   stack : function call, local variables
+*    heap: object, array, string etc..
+*/
+function myFunction() {
+    var name="Rahul"
+    return;
+    };
+    myFunction();
+    // scope in JS
+    {
+        var y ="rahul";
+        };
+
+
 
 // where - is used its a basic core concepts and where -- is used its a very important concept 
 
@@ -272,7 +302,64 @@ console.log(array[0]);
 
 
 
-// 21.--Objects
+// *******************21.--Objects ***************//
+//object = object is a define is in his topic its called object. object defination is its also hold values .
+var obj={name:"<NAME>",age:47};
+obj["address"]="indore";
+delete obj['age'];
+for (key in obj){
+    if(!isNaN(+key)){
+        continue;}
+        else{
+            console.log(`${key}:${obj[key]}`);}}
+
+// Types of object 
+// Object literal= it's one way to create objects .
+var person={"name":"sanket","age":68,"city":"delhi"};
+person.country='India';
+Object.keys(person); //it will return all keys present inside that object
+Object.values(person);//it will return value of each key present inside that object
+Object.entries(person)//it will return both key and value pair of every property present inside this object
+// Types of object
+// Constructor Function = It's used when you want to make many instances from same class.
+function Person(name, age, city) {
+    this.name = name ;
+    this.age = age;
+    this.city=city; }
+    Person.prototype.greetings=()=>{alert(`Hello my name is ${this.name}`)}
+    Person("Sanket", "29", 'Delhi');
+    Person('Rahul',"20",'Mumbai')
+
+
+// blank obj 
+    const emptyObj={}
+    const newPerson=new Person();
+
+
+
+ // filled obj 
+ const fullObj={'name':'sanket','age':3,'city':'mumbai'}
+ const anotherFullObj=[fullObj];
+ anotherFullObj[0].name='rahul'
+ anotherFullObj[0]['city']='chennai'
+ anotherFullObj[0][Symbol('id')]=-1
+ anotherFullObj[0]["address"]=null
+ anotherFullObj[0]["phone number"]=undefined
+ anotherFullObj[0]["phone number"]=NaN
+ anotherFullObj[0]["phone number"]=Infinity
+ anotherFullObj[0]["phone number"]=true
+ anotherFullObj[0]["phone number"]=false
+ anotherFullObj[0]["phone number"]=Symbol()
+ anotherFullObj[0]["phone number"]=BigInt(-5n)
+ anotherFullObj[0]["phone number"]=Function(()=>{})
+ anotherFullObj[0]["phone number"]=Date()
+ anotherFullObj[0]["phone number"]=RegExp(/abc/gimy)
+ anotherFullObj[0]["phone number"]=Set([1])
+ anotherFullObj[0]["phone number"]=Map([[1]])
+ anotherFullObj[0]["phone number"]=WeakSet([])
+ anotherFullObj[0]["phone number"]=WeakMap([]).get({})
+
+
 // 22.--Events
 // 23.--DOM Manipulation
 // 24.--AJAX
@@ -357,7 +444,7 @@ console.log(result1);
 
 // some = some is used to check whether any elements in array pass test condition . Ex-
 var arr1=['a','b'],
-result1=arr1.some((element))=>{return (element==='a' || element === 'b');};
+result1=arr1.some((element)=>{return (element==="a" && 0===true );}) // true
 console.log(result1);
 
 
@@ -366,7 +453,32 @@ var arr1=['a','b']
 arr1.forEach((element)=>{});
 
 
-// map = map is used to create a new array with the results of calling a provided function on every element in the calling array .  map is used to create a new array with the results of calling a provided function on every element in the calling array .map is used to create a new array with results returned by calling function once per element in original array . map is used to create a new array with results returned by callback function executed on each element of source array . Ex-
+// map = map is used to create a new array with the results of calling a provided function on every element in the calling array .  map is used to create a new array with the results of calling a provided function on every element in the calling array .map is used to create a new array with results returned by calling function once per element in original array . map is used to create a new array with results returned by callback function executed on each element of source array . Ex=
+
+
+
+
+//******************Excution context *********//
+// Excution cotext = when we run the fuction , a function create imaginary container . 3 topic container carry they are 1. variables , 2. function inside that parent function   and other is 3. lexical enviroment of that function . 
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    } 
+
+
+// lexical enviroment = its a one chart , where we acces particular function.
+myFunction();   // this will print Hello JavaScript! because it's inside global scope and not inside local scope.
+var x='global';
+myFunction();
+document.write('<br>');
+alert(x)
+// hoisting - varible and functions are moved from top to bottom , but not initialized with value until they get called or assigned a value
+
+
+
+// *************how to copy reference ***********//
+
+
 
 
 
