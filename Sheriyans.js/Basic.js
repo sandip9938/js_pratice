@@ -51,13 +51,13 @@ let age;
 console.log(age);
 
 
-// 4.--the diffrence 
-// 5.--window Object
+
+
 // 6.--browser context api
-// 7.--stack
-// 8.--heap memory
-// 9.--excution context
-// 10.-- lexical scope
+
+
+
+
 // ******************************11.-hoisting********************** //
 // Hoisting= variables and function are Hoisted which means their declartion is moved on top of code. EX-
 function hoist() {
@@ -224,7 +224,11 @@ for(i=0; i<10; i++){
 
 
 
-// 16.-- truthy vs falsy
+// *********************16.-- truthy vs falsy************** //
+// truthy & falsy is also difference true and false.
+// truthy = true , defined 
+// falsy = 0 , false , undefined , Null , NaN , document
+
 // 17.--switch
 
 
@@ -366,7 +370,7 @@ function Person(name, age, city) {
 // 25.--JSON
 // 26.--Regular Expressions
 // 27.--Promises
-// 28.--Maps and Sets
+// 28.--Maps and Sets 
 // 29.--Web Storage
 // 30.--Cookies
 // 31.--HTTP Request Methods
@@ -452,6 +456,11 @@ console.log(result1);
 var arr1=['a','b']
 arr1.forEach((element)=>{});
 
+//forin= its use looping the objects.
+
+
+
+
 
 // map = map is used to create a new array with the results of calling a provided function on every element in the calling array .  map is used to create a new array with the results of calling a provided function on every element in the calling array .map is used to create a new array with results returned by calling function once per element in original array . map is used to create a new array with results returned by callback function executed on each element of source array . Ex=
 
@@ -477,6 +486,45 @@ alert(x)
 
 
 // *************how to copy reference ***********//
+/*
+let obj={};
+obj['name']= '<NAME>';
+*/
+const obj={} ;   /* const keyword makes object immutable */
+obj["name"]='<NAME>'
+delete obj;    /* delete keyword deletes the entire object and it's properties */
+
+
+
+
+
+// ********Callback************//
+//callback functions are called when some event occurs, like click or keypress etc..
+function displayMessage(){
+    console.log('display message');
+    }
+    setTimeout(()=>{console.log('timeout')},20); // 20ms delay
+    setTimeout((message)=>{console.log(`Timeout ${message}`) },15,'hello world');
+    setTimeout (displayMessage(),30);// callback function
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
