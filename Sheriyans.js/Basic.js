@@ -510,6 +510,56 @@ function displayMessage(){
 
       
 
+// ****************Hof **************//
+// Higher order function is a function that takes another funciton as an argument/parameter .
+// It returns new function which can be used in place of original function. Ex=
+function addNumbers(num){
+    return num+4;}
+    addNumbers(6)//returns number +4
+    addNumbers=(num)=>num*7;//arrow funtion syntax
+    addNumbers(89)
+    //*******************map ***********************//
+    Array.prototype.map =(func)=>{return this}
+
+
+
+
+// constructer funcn 
+class Person{
+    constructor({firstName , lastName}) {
+        this._firstName = firstName || 'John';
+        this._lastName = lastName||'Doe'}
+        fullName() {
+            return `${this._firstName}${this._lastName}`}}
+            var person =new Person ({firstName:'Jane',lastName: 'Smith'});
+            person.fullName();
+//*********************Object Destructuring*********************//
+            var user={id : "1", name:"<NAME>", email :" <EMAIL>" };
+            var id="1";
+            var name="<NAME>";
+            /*            var {id}=user;*/
+            var {email,...restOfUser}=user;/* restOfUser will have all other keys except for email*/
+
+
+
+// first class funcn = when we feel its blank object it called first class funcn.
+var myFunc=()=>{}
+myFunc.name='myFunction';
+typeof myFunc;
+const square = x =>x**2 ;
+
+// new keyword 
+let obj={}
+obj.__proto__=Person.prototype;
+obj instanceof Object;
+obj instanceof Person;
+
+// life 
+
+// prototype 
+
+// closure
+// pure and impure funcn 
 
 
 
@@ -517,7 +567,7 @@ function displayMessage(){
 
 
 
-
+ 
 
 
 
