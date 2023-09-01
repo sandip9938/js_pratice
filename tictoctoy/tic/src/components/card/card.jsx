@@ -2,7 +2,7 @@ import Icon from "../icon/icon"
 
 
 
-function card({player}) {
+function card({player,onPlay,index}) {
     let icon = <Icon/>
     if(player === 'X'){
       icon = <Icon name = 'cross'/>  
@@ -11,7 +11,7 @@ function card({player}) {
     icon = <Icon name='circle'/>
  }
   return (
-    <div className='card'>
+    <div className='card' onClick={()=>onPlay(index)}>
       {icon}
     </div>
   )
